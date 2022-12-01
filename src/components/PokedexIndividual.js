@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getSinglePokemon, getBulbasaur } from './lib/api';
+import { getSinglePokemon } from './lib/api';
 import CheckForTypes from './CheckForTypes';
 import { useParams } from 'react-router-dom';
+import PokeDexEntry from './PokeDexEntry';
 
 function PokedexIndividual() {
   const { id } = useParams();
@@ -16,13 +17,15 @@ function PokedexIndividual() {
     return <p>Catching Pokemon...</p>;
   }
 
-  console.log(pokemon.types);
-  console.log(pokemon.types[0].type.name);
+  let capitalName = pokemon.name;
+  capitalName = capitalName[0].toUpperCase() + capitalName.substring(1);
+
+
 
   return (
     <section className="section">
       <div className="container">
-        <h2 className="title has-text-centered">{pokemon.name}</h2>
+        <h2 className="title has-text-centered">{capitalName}</h2>
         <hr />
         <div className="columns">
           <div className="column is-half">
@@ -38,11 +41,12 @@ function PokedexIndividual() {
             <hr />
             <CheckForTypes {...pokemon} />
             <hr />
-            <div className="column is-half">
+            <div className="column">
               <h4 className="title is-4">Region:</h4>
               <hr />
               <p>region here</p>
               <hr />
+              <PokeDexEntry id={id}/>
             </div>
           </div>
         </div>
