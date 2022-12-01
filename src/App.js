@@ -4,6 +4,7 @@ import PokedexIndividual from './components/PokedexIndividual';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import PokedexAll from './components/PokedexAll';
+import SearchBar from './components/SearchBar';
 
 const App = () => {
   return (
@@ -16,8 +17,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="*"
-            element={<p>The pokemon you are after, hasn&apos;t been found yet</p>}
+            element={
+              <p>The pokemon you are after, hasn&apos;t been found yet</p>
+            }
           />
+          <Route path="/search" element={<SearchBar />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -12,7 +12,7 @@ function CheckForHabitat(pokeDex) {
     return (
       <div className="column">
         <h4 className="title is-4">Habitat:</h4>
-        <p>Currently Unkown</p>
+        <p>Currently Unknown</p>
       </div>
     );
   }
