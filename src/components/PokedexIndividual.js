@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { getSinglePokemon, getBulbasaur } from './lib/api';
 import CheckForTypes from './CheckForTypes';
+import { useParams } from 'react-router-dom';
 
-function PokedexIndividual(pokeId) {
+function PokedexIndividual() {
+  const { id } = useParams();
   const [pokemon, setPokemon] = useState(null);
   useEffect(() => {
-    getBulbasaur(pokeId)
+    getSinglePokemon(id)
       .then((res) => setPokemon(res.data))
       .catch((err) => console.error(err));
-  }, [pokeId]);
+  }, [id]);
 
   if (pokemon === null) {
     return <p>Catching Pokemon...</p>;
