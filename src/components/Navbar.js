@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ const Navbar = () => {
             <Link to="/pokedex-all" className="navbar-item">
               Pokedex
             </Link>
+            <SearchBar />
           </div>
         </div>
       </nav>
