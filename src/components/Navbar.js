@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar is-danger">
-        <div className="container ">
+        <div className="container">
           <div className="navbar-brand "></div>
           <Link to="/">
             <img
@@ -20,6 +20,8 @@ const Navbar = () => {
             <Link to="/pokedex-all" className="navbar-item">
               Pokedex
             </Link>
+          </div>
+          <div className="navbar-end">
             <SearchBar />
           </div>
         </div>
