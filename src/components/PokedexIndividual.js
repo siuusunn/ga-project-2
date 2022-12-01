@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getSinglePokemon, getBulbasaur } from './lib/api';
+import CheckForTypes from './CheckForTypes';
 
 function PokedexIndividual(pokeId) {
   const [pokemon, setPokemon] = useState(null);
@@ -10,8 +11,11 @@ function PokedexIndividual(pokeId) {
   }, [pokeId]);
 
   if (pokemon === null) {
-    return <p>The pokemon you are after, hasn&apos;t been found yet</p>;
+    return <p>Catching Pokemon...</p>;
   }
+
+  console.log(pokemon.types);
+  console.log(pokemon.types[0].type.name);
 
   return (
     <section className="section">
@@ -20,6 +24,24 @@ function PokedexIndividual(pokeId) {
         <hr />
         <div className="columns">
           <div className="column is-half">
+            <figure className="image">
+              <img
+                src={pokemon.sprites.other['official-artwork'].front_default}
+                alt={pokemon.name}
+              />
+            </figure>
+          </div>
+          <div className="column is-half">
+            <h4 className="title is-4">Type:</h4>
+            <hr />
+            <CheckForTypes {...pokemon} />
+            <hr />
+            <div className="column is-half">
+              <h4 className="title is-4">Region:</h4>
+              <hr />
+              <p>region here</p>
+              <hr />
+            </div>
           </div>
         </div>
       </div>
