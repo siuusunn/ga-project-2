@@ -1,1 +1,13 @@
 @import '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
+
+.hero-body {
+  background-image: url('https://www.linkpicture.com/q/Pokemon-Center.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  padding: 20px 0 20px 0;
+  font-size: 14px;
+}
