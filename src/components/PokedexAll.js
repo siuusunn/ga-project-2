@@ -1,21 +1,29 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
-import { getAllPokemons } from '../lib/api';
-import axios from 'axios';
+import { getAllPokemon } from './lib/api';
 
 const PokedexAll = () => {
   const [pokemons, setPokemons] = useState(null);
   useEffect(() => {
-    axios
-      .get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1154')
+    getAllPokemon()
       .then((res) => {
         setPokemons(res.data);
-        console.log(pokemons.results);
       })
       .catch((err) => console.error(err.response));
   }, []);
 
-  return <p>PokedexAll component</p>;
+  if (!pokemons) {
+    return <p>Loading</p>;
+  }
+
+  console.log(pokemons);
+
+  return (
+    <>
+      {pokemons.results.map((pokemon) => (
+        <p key={pokemon.name}>{pokemon.name}</p>
+      ))}
+    </>
+  );
 };
 
 export default PokedexAll;
