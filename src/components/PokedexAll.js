@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllPokemon } from './lib/api';
+import PokedexCard from './PokedexCard';
 
 const PokedexAll = () => {
   const [pokemons, setPokemons] = useState(null);
@@ -25,13 +26,7 @@ const PokedexAll = () => {
   return (
     <div className="container has-text-centered">
       {titleCasePokemons.map((pokemon) => (
-        <div className="card" key={pokemon}>
-          <Link to="/pokedex-individual" key={pokemon}>
-            <div className="card-content">
-              <p className="title is-6">{pokemon}</p>
-            </div>
-          </Link>
-        </div>
+        <PokedexCard key={pokemon} pokemon={pokemon} />
       ))}
     </div>
   );
