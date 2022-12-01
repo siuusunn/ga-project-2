@@ -20,8 +20,6 @@ function PokedexIndividual() {
   let capitalName = pokemon.name;
   capitalName = capitalName[0].toUpperCase() + capitalName.substring(1);
 
-
-
   return (
     <section className="section">
       <div className="container">
@@ -41,13 +39,7 @@ function PokedexIndividual() {
             <hr />
             <CheckForTypes {...pokemon} />
             <hr />
-            <div className="column">
-              <h4 className="title is-4">Region:</h4>
-              <hr />
-              <p>region here</p>
-              <hr />
-              <PokeDexEntry id={id}/>
-            </div>
+            <PokeDexEntry id={id} />
           </div>
         </div>
       </div>
