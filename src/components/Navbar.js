@@ -9,7 +9,7 @@ const Navbar = () => {
             <Link to="/" className="navbar-item">
               Home
             </Link>
-            <Link to="/" className="navbar-item">
+            <Link to="/pokedex-all" className="navbar-item">
               Pokedex
             </Link>
           </div>
