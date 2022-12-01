@@ -14,6 +14,10 @@ const App = () => {
           <Route path="/pokedex-all" element={<PokedexAll />} />
           <Route path="/" element={<Home />} />
           <Route path="/pokedex-individual" element={<PokedexIndividual />} />
+          <Route
+            path="*"
+            element={<p>The pokemon you are after, hasn&apos;t been found yet</p>}
+          />
         </Routes>
       </BrowserRouter>
     </>
