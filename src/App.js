@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PokedexIndividual from './components/PokedexIndividual';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import PokedexAll from './components/PokedexAll';
 import SearchBar from './components/SearchBar';
 
@@ -23,6 +24,7 @@ const App = () => {
           />
           <Route path="/search" element={<SearchBar />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
