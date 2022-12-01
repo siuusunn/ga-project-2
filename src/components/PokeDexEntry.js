@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getPokedexEntry } from './lib/api';
 import { useParams } from 'react-router-dom';
 import CheckForHabitat from './CheckForHabitat';
+import CheckPokeDexDescription from './CheckPokeDexDescription';
 
 function PokeDexEntry() {
   const { id } = useParams();
@@ -16,6 +17,8 @@ function PokeDexEntry() {
     return <p>Loading PokéData</p>;
   }
 
+  console.log(pokeDex.flavor_text_entries);
+  console.log(pokeDex.flavor_text_entries[37].flavor_text);
   return (
     <>
       <CheckForHabitat {...pokeDex} />
@@ -23,7 +26,7 @@ function PokeDexEntry() {
       <div className="column">
         <h4 className="title is-4">PokéDex Entry:</h4>
       </div>
-      <p>{pokeDex.flavor_text_entries[4].flavor_text}</p>
+      <CheckPokeDexDescription {...pokeDex} />
     </>
   );
 }

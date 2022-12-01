@@ -28,11 +28,18 @@ function SearchBar() {
             className="input is-link is-small is-rounded"
             type="text"
             onChange={handleChange}
-            placeholder="name"
+            placeholder="name..."
             name="name"
             value={searchData.name}
           ></input>
-          <button className='button is-small is-rounded is-link' onClick={handleSubmit}>Submit</button>
+          <div className="control">
+            <p
+              className="button is-small is-rounded is-link"
+              onClick={handleSubmit}
+            >
+              Submit
+            </p>
+          </div>
         </div>
       </section>
     </>
