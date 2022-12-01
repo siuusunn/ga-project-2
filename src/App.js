@@ -16,7 +16,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="*"
-            element={<p>The pokemon you are after, hasn&apos;t been found yet</p>}
+            element={
+              <p>The pokemon you are after, hasn&apos;t been found yet</p>
+            }
           />
         </Routes>
       </BrowserRouter>
