@@ -20,7 +20,7 @@ const PokedexAll = () => {
   return (
     <div className="section">
       <div className="container">
-        <div className="columns has-text-centered is-multiline">
+        <div className="columns is-multiline">
           {pokemons.results.map((pokemon) => (
             <PokedexCard key={pokemon.name} pokemon={pokemon.name} />
           ))}

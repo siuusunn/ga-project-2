@@ -32,7 +32,7 @@ const PokedexCard = ({ pokemon }) => {
           <p className="card-header-title is-6">{titleCase(pokemon)}</p>
         </div>
         <div className="card-image">
-          <figure className="image is-1by1">
+          <figure className="image is-128x128">
             <img src={singlePokemonImage}></img>
           </figure>
         </div>
