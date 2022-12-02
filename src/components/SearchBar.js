@@ -23,6 +23,7 @@ function SearchBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/pokedex-all/${searchData.name}`);
+    setFilteredResults([]);
   };
 
   const [pokemons, setPokemons] = useState(null);
@@ -67,31 +68,10 @@ function SearchBar() {
           </div>
         </div>
         <ul>
-          <FilteredSearch handleChange={handleChange} filteredResults={filteredResults} />
+          <FilteredSearch filteredResults={filteredResults} />
         </ul>
       </section>
     </>
   );
 }
 export default SearchBar;
-
-// <section className="section">
-//   <div className="field container is-grouped">
-//     <input
-//       className="input is-link is-small is-rounded"
-//       type="text"
-//       onChange={handleChange}
-//       placeholder="name"
-//       name="name"
-//       value={searchData.name}
-//     ></input>
-//     <div className="control">
-//       <p
-//         className="button is-small is-rounded is-link"
-//         onClick={handleSubmit}
-//       >
-//         Submit
-//       </p>
-//     </div>
-//   </div>
-// </section>;
