@@ -6,6 +6,7 @@ import { BASE_URL } from './lib/api';
 const PokedexCard = ({ pokemon }) => {
   const baseLink = `/pokedex-all/${pokemon}`;
   const [singlePokemonImage, setSinglePokemonImage] = useState(null);
+  const [pokemonType, setPokemonType] = useState(null);
 
   useEffect(() => {
     axios
@@ -14,27 +15,25 @@ const PokedexCard = ({ pokemon }) => {
         setSinglePokemonImage(
           res.data.sprites.other['official-artwork'].front_default
         );
+        setPokemonType(res.data.types[0].type.name);
       })
       .catch((err) => console.error(err.response));
   }, []);
 
-  const titleCase = (name) => {
-    const first = name.toString().charAt(0).toUpperCase();
-    const second = name.toString().slice(1);
-    const result = first + second;
-    return result;
-  };
+  if (!pokemonType) {
+    return <p>Loading</p>;
+  }
 
   return (
     <Link to={baseLink} key={pokemon}>
-      <div className="card" key={pokemon}>
-        <div className="card-header">
-          <p className="card-header-title is-6">{titleCase(pokemon)}</p>
-        </div>
-        <div className="card-image">
-          <figure className="image is-1by1">
-            <img src={singlePokemonImage}></img>
-          </figure>
+      <div className="card" key={pokemon} id={pokemonType}>
+        <div className="card-content">
+          <p className="title is-5 is-capitalized">{pokemon}</p>
+          <div className="card-image">
+            <figure className="image is-1by1">
+              <img src={singlePokemonImage}></img>
+            </figure>
+          </div>
         </div>
       </div>
     </Link>
