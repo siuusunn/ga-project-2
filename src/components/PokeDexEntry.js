@@ -7,6 +7,7 @@ import CheckPokeDexDescription from './CheckPokeDexDescription';
 function PokeDexEntry() {
   const { id } = useParams();
   const [pokeDex, setPokeDex] = useState(null);
+
   useEffect(() => {
     getPokedexEntry(id)
       .then((res) => setPokeDex(res.data))
@@ -17,8 +18,6 @@ function PokeDexEntry() {
     return <p>Loading PokéData</p>;
   }
 
-  console.log(pokeDex.flavor_text_entries);
-  console.log(pokeDex.flavor_text_entries[37].flavor_text);
   return (
     <>
       <CheckForHabitat {...pokeDex} />
