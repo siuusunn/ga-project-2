@@ -17,9 +17,9 @@ function FilteredSearch({ filteredResults, onClick }) {
     <>
       {filteredResults &&
         filteredResults.slice(0, 5).map((result) => (
-          <p key={result} onClick={handleClick} value={result}>
+          <li className='stayput' key={result} onClick={handleClick} value={result}>
             {result}
-          </p>
+          </li>
         ))}
     </>
   );
