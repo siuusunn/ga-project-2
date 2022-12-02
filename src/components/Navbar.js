@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="navbar-brand ">
+          <div className="navbar-brand">
             <Link to="/" className="navbar-item">
               <img
                 src="https://iili.io/HfiJ2cv.md.png"
