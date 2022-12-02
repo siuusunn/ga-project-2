@@ -68,7 +68,10 @@ function SearchBar() {
           </div>
         </div>
         <ul>
-          <FilteredSearch filteredResults={filteredResults} />
+          <FilteredSearch
+            onClick={{ setFilteredResults, setSearchData }}
+            filteredResults={filteredResults}
+          />
         </ul>
       </section>
     </>
