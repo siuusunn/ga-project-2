@@ -1,9 +1,9 @@
 const Home = () => (
   <section className="hero is-fullheight-with-navbar is-warning">
     <div className="hero-body">
-      <div className="container titles">
-        <p className="title is-1 has-text-centered has-text-white">Pokédex</p>
-        <p className="subtitle has-text-centered has-text-white">
+      <div className="container">
+        <p className="title is-1 has-text-centered has-text-black">Pokédex</p>
+        <p className="subtitle is-3 has-text-centered has-text-white">
           Welcome Trainer!
         </p>
       </div>
