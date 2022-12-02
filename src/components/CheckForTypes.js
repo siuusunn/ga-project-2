@@ -4,13 +4,13 @@ const CheckForTypes = (pokemon) => {
   if (pokeType.length === 2) {
     return (
       <>
-        <p className="is-capitalized">
+        <p className="is-capitalized subtitle is-4">
           {pokemon.types[0].type.name} - {pokemon.types[1].type.name}
         </p>
       </>
     );
   } else {
-    return <p className="is-capitalized">{pokemon.types[0].type.name}</p>;
+    return <p className="is-capitalized subtitle is-4">{pokemon.types[0].type.name}</p>;
   }
 };
 

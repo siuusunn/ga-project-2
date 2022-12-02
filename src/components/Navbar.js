@@ -22,7 +22,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className="navbar-end navbar-item">
+          <div className="navbar-end navbar-item has-dropdown">
             <SearchBar />
           </div>
         </div>

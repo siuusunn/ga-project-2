@@ -49,7 +49,7 @@ function SearchBar() {
           <form autoComplete="off">
             <div className="autocomplete-input">
               <input
-                className="input is-link is-small is-rounded"
+                className="input is-danger is-small is-rounded"
                 type="text"
                 onChange={handleChange}
                 placeholder="name"
@@ -67,7 +67,7 @@ function SearchBar() {
             />
           </div>
         </div>
-        <ul>
+        <ul className='' >
           <FilteredSearch
             onClick={{ setFilteredResults, setSearchData }}
             filteredResults={filteredResults}

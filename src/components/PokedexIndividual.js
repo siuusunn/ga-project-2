@@ -33,7 +33,7 @@ function PokedexIndividual() {
             </figure>
           </div>
           <div className="column is-half">
-            <h4 className="title is-4">Type:</h4>
+            <h4 className="title is-3">Type:</h4>
             <hr />
             <CheckForTypes {...pokemon} />
             <hr />
