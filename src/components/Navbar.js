@@ -22,7 +22,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end navbar-item">
             <SearchBar />
           </div>
         </div>

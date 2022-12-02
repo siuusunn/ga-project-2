@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
-function FilteredSearch({ filteredResults }) {
-  const [displayResults, setDisplayResults] = useState({});
+function FilteredSearch({ filteredResults, onClick }) {
   const navigate = useNavigate();
 
   if (filteredResults === null) {
@@ -11,14 +9,15 @@ function FilteredSearch({ filteredResults }) {
 
   const handleClick = (e) => {
     navigate(`/pokedex-all/${e.target.innerText}`);
-    filteredResults = '';
+    onClick.setFilteredResults('');
+    onClick.setSearchData({ name: '' });
   };
 
   return (
     <>
       {filteredResults &&
         filteredResults.slice(0, 5).map((result) => (
-          <li key={result} onClick={handleClick} value={result}>
+          <li className='stayput' key={result} onClick={handleClick} value={result}>
             {result}
           </li>
         ))}
