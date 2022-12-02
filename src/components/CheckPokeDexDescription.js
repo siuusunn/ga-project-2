@@ -3,6 +3,6 @@ function CheckPokeDexDescription(pokeDex) {
   const foundEnglish = descriptions.find(
     (element) => element.language.name === 'en'
   );
-  return <p>{foundEnglish.flavor_text}</p>;
+  return <p className="subtitle is-4" >{foundEnglish.flavor_text}</p>;
 }
 export default CheckPokeDexDescription;

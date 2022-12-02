@@ -15,14 +15,14 @@ function PokeDexEntry() {
   }, [id]);
 
   if (pokeDex === null) {
-    return <p>Loading PokéData</p>;
+    return <p className="subtitle is-5">Loading PokéData</p>;
   }
 
   return (
     <>
       <CheckForHabitat {...pokeDex} />
       <hr />
-      <h4 className="title is-4">PokéDex Entry:</h4>
+      <h4 className="title is-3">PokéDex Entry:</h4>
       <CheckPokeDexDescription {...pokeDex} />
     </>
   );
