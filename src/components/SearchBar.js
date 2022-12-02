@@ -23,14 +23,23 @@ function SearchBar() {
   return (
     <>
       <section className="section">
-        <div className="container">
+        <div className="field container is-grouped">
           <input
+            className="input is-link is-small is-rounded"
+            type="text"
             onChange={handleChange}
-            placeholder="name"
+            placeholder="name..."
             name="name"
             value={searchData.name}
           ></input>
-          <button onClick={handleSubmit}>Submit</button>
+          <div className="control">
+            <p
+              className="button is-small is-rounded is-link"
+              onClick={handleSubmit}
+            >
+              Submit
+            </p>
+          </div>
         </div>
       </section>
     </>
