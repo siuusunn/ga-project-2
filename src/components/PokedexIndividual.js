@@ -19,7 +19,7 @@ function PokedexIndividual() {
   return (
     <section className="section">
       <div className="container">
-        <h2 className="title has-text-centered is-capitalized">
+        <h2 className="title has-text-centered is-capitalized is-2">
           {pokemon.name}
         </h2>
         <hr />
@@ -34,7 +34,6 @@ function PokedexIndividual() {
           </div>
           <div className="column is-half">
             <h4 className="title is-3">Type:</h4>
-            <hr />
             <CheckForTypes {...pokemon} />
             <hr />
             <PokeDexEntry id={id} />
