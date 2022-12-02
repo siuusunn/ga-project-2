@@ -18,15 +18,20 @@ const PokedexAll = () => {
   }
 
   return (
-    <div className="section">
-      <div className="container">
-        <div className="columns is-multiline">
-          {pokemons.results.map((pokemon) => (
-            <PokedexCard key={pokemon.name} pokemon={pokemon.name} />
-          ))}
+    <>
+      <section className="section">
+        <div className="container"></div>
+      </section>
+      <div className="section">
+        <div className="container">
+          <div className="columns is-multiline">
+            {pokemons.results.map((pokemon) => (
+              <PokedexCard key={pokemon.name} pokemon={pokemon.name} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
