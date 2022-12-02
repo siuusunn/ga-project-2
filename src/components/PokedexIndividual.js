@@ -16,11 +16,12 @@ function PokedexIndividual() {
   if (pokemon === null) {
     return <p>Catching Pokemon...</p>;
   }
-
   return (
     <section className="section">
       <div className="container">
-        <h2 className="title has-text-centered is-capitalized">{pokemon.name}</h2>
+        <h2 className="title has-text-centered is-capitalized">
+          {pokemon.name}
+        </h2>
         <hr />
         <div className="columns">
           <div className="column is-half">
