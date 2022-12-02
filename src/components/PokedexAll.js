@@ -19,10 +19,7 @@ const PokedexAll = () => {
 
   return (
     <>
-      <section className="section">
-        <div className="container"></div>
-      </section>
-      <div className="section">
+      <div className="section pokedex-all">
         <div className="container">
           <div className="columns is-multiline">
             {pokemons.results.map((pokemon) => (

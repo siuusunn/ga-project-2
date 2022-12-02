@@ -1,4 +1,14 @@
 .footer {
   padding: 20px 0 20px 0;
   font-size: 14px;
+  background-color: #cc322a;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: yellow;
+    }
+  }
 }

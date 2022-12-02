@@ -28,10 +28,12 @@ const PokedexCard = ({ pokemon }) => {
     <Link to={baseLink} key={pokemon}>
       <div className="card" key={pokemon} id={pokemonType}>
         <div className="card-content">
-          <p className="title is-5 is-capitalized">{pokemon}</p>
+          <p className="title is-4 is-capitalized has-text-centered">
+            {pokemon}
+          </p>
           <div className="card-image">
             <figure className="image is-1by1">
-              <img src={singlePokemonImage}></img>
+              <img src={singlePokemonImage} alt={pokemon}></img>
             </figure>
           </div>
         </div>

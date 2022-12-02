@@ -22,9 +22,7 @@ function PokeDexEntry() {
     <>
       <CheckForHabitat {...pokeDex} />
       <hr />
-      <div className="column">
-        <h4 className="title is-4">PokéDex Entry:</h4>
-      </div>
+      <h4 className="title is-4">PokéDex Entry:</h4>
       <CheckPokeDexDescription {...pokeDex} />
     </>
   );
