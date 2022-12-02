@@ -1,7 +1,18 @@
+.navbar {
+  background-color: #cc322a;
+}
+
 .logo {
   object-fit: scale-down;
+  transition: transform 0.7s ease-in-out;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 }
 
 .navbar-item {
   height: 60px;
+  color: white;
+  font-size: 25px;
 }
