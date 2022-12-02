@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from './lib/api';
 
-const PokedexCard = ({ pokemon }) => {
+const PokedexCard = ({ pokemon, type }) => {
   const baseLink = `/pokedex-all/${pokemon}`;
   const [singlePokemonImage, setSinglePokemonImage] = useState(null);
   const [pokemonType, setPokemonType] = useState(null);
@@ -19,10 +19,6 @@ const PokedexCard = ({ pokemon }) => {
       })
       .catch((err) => console.error(err.response));
   }, []);
-
-  if (!pokemonType) {
-    return <p>Loading</p>;
-  }
 
   return (
     <Link to={baseLink} key={pokemon}>
