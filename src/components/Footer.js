@@ -12,7 +12,7 @@ const Footer = () => {
           <a target="_blank" rel="noreferrer" href={aliceGithub}>
             @siuusunn
           </a>{' '}
-          & Toby{' '}
+          & Jet{' '}
           <a target="_blank" rel="noreferrer" href={tobyGithub}>
             @CodebyJet
           </a>
