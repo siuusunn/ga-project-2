@@ -14,10 +14,10 @@ const Navbar = () => {
               ></img>
             </Link>
             <div className="navbar-start">
-              <Link to="/" className="navbar-item">
+              <Link to="/" className="navbar-item home-button">
                 Home
               </Link>
-              <Link to="/pokedex-all" className="navbar-item">
+              <Link to="/pokedex-all" className="navbar-item pokedex-button">
                 Pokedex
               </Link>
             </div>
