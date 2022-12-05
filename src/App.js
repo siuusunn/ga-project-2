@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PokedexAll from './components/PokedexAll';
+
 import SearchBar from './components/SearchBar';
 
 const App = () => {
