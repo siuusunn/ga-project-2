@@ -18,7 +18,7 @@ function FilteredSearch({ filteredResults, onClick }) {
       {filteredResults &&
         filteredResults.slice(0, 4).map((result) => (
           <li
-            className="results has-text-black"
+            className="results has-text-black is-capitalized"
             key={result}
             onClick={handleClick}
             value={result}
