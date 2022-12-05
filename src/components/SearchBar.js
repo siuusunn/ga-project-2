@@ -52,7 +52,7 @@ function SearchBar() {
                 className="input is-danger is-small is-rounded"
                 type="text"
                 onChange={handleChange}
-                placeholder="name"
+                placeholder="Pokemon Name"
                 name="name"
                 value={searchData.name}
               />
@@ -67,7 +67,7 @@ function SearchBar() {
             />
           </div>
         </div>
-        <ul className='' >
+        <ul className="">
           <FilteredSearch
             onClick={{ setFilteredResults, setSearchData }}
             filteredResults={filteredResults}

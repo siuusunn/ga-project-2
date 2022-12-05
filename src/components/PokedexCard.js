@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from './lib/api';
 
-const PokedexCard = ({ pokemon, type }) => {
+const PokedexCard = ({ pokemon }) => {
   const baseLink = `/pokedex-all/${pokemon}`;
   const [singlePokemonImage, setSinglePokemonImage] = useState(null);
   const [pokemonType, setPokemonType] = useState(null);
