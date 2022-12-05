@@ -11,13 +11,32 @@
   }
 }
 
+.home-button,
+.pokedex-button {
+  &:hover {
+    color: yellow !important;
+  }
+}
+
 .navbar-item {
-  // height: 60px;
-  color: white;
+  color: white !important;
   font-size: 25px;
 }
-.results{
+
+.button {
+  margin-left: 5px;
+}
+
+.results {
   padding: 0px;
   font-size: 18px;
   margin: 0px;
+}
+
+li {
+  cursor: pointer;
+
+  &:hover {
+    color: yellow;
+  }
 }
