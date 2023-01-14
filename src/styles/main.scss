@@ -1,4 +1,4 @@
-@use '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
+@import '../../node_modules/bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
 @import '_layout.scss';
 @import '_navbar.scss';
 @import '_hero.scss';
