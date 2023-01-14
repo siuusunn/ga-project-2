@@ -2,7 +2,7 @@
 
 ## Project Description
 
-A group project where we utilize free API to fetch data and build a website using React. The Pokedex is built using The Poke API (https://pokeapi.co/). The website shows user all the pokemons to date with individual info of name, picture, type, habitat, and descriptions.
+A pair-coding project where we utilize a free API to fetch data and build a website using React. The Pokedex is built using The Poke API (https://pokeapi.co/). The website shows users all the pokemons to date with individual info of name, picture, type, habitat, and descriptions.
 
 ## Deployment Link
 
@@ -12,8 +12,8 @@ TBC
 
 Working team:
 
-- Alice (https://github.com/siuusunn)
-- Jet (https://github.com/CodebyJet/)
+- Alice Lo (https://github.com/siuusunn)
+- Jet Haze (https://github.com/CodebyJet/)
 
 Timeframe:
 01/12/2022 - Project start
@@ -22,22 +22,13 @@ Timeframe:
 
 ## Technologies Used
 
-Front End:
+Front End: React, Sass, Bulma
 
-- React
-- Sass
-- Bulma
-
-Development Tools:
-
-- Visual Code Studio
+Development Tools: Visual Code Studio
 
 ## Brief
 
-Utilize free API found online to build a website using:
-
-- Data fetching
-- React.js
+Use a public RestfulAPI to build a web app using React.js
 
 ## Planning
 
@@ -49,21 +40,18 @@ Created a wireframe to get started with our basic components of the website, and
 
 The development is divided into six main components:
 
-Jet:
-
-- Home
-- Individual Pokemon
-- Search Bar
-
-Alice:
-
 - Navbar
+- Home
 - Pokedex
+- Individual Pokemon Page
+- Search Bar
 - Footer
+
+My responsibilities for this project are: Navbar, Pokedex, Footer, as well as the general design of the app.
 
 ### Navbar
 
-The navbar is straight-forward and simple, I used Bulma to style it up and added a little animation to the Pokeball icon:
+The navbar is straight-forward and simple, I used Bulma to style it up and added a little animation to the Pokeball icon when user hover over it:
 
 ![Navbar_Example](./ReadMeAssets/Navbar-example.gif)
 
@@ -87,7 +75,7 @@ The Pokedex component uses `getAllPokemon()` to fetch data from the API. As the 
 
 ```
 
-I used the `map` function and pass the names to the PokedexCard component to generate a new endpoint to fetch data for all the individual cards:
+So I used the `map` function and pass the names to the PokedexCard component to generate a new endpoint to fetch data for all the individual cards:
 
 ```useEffect(() => {
 axios
@@ -106,31 +94,31 @@ Using the above methods I managed to generate the cards to show all pokemons in 
 
 ## Challenges
 
-Alice:
-The API does not provided one endpoint that gives access to all the data. For example, the `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1154` link gives you a list of pokemon names and urls to their individual endpoints.
+The API does not provide one endpoint that gives access to all the data. For example, the `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1154` endpoint sends back a list of pokemon names and urls to their individual endpoints.
 
-It is more diffucult to get the data and thus I had to write another `get` function in a sub-component to get the desired data. This is also a major block when I was trying to write a filter function for the `Pokedex.js` component.
+It is more diffucult to get the data and thus I had to write another `get` function in another component to get the desired data. This was also a major block when I was trying to write a filter function for the `Pokedex.js` component.
 
 ## Wins
 
-Alice:
-As mentioned above, the way the API is set up makes it quite difficult to access desired data. A big win is difinitely passing the names of pokemons from `getAllPokemons()` to the `PokedexCard.js` component to generate individual endpoints to fetch the data for all the individual pokemons.
+### Data Fetching
+
+As mentioned above, the way the API is set up makes it quite difficult to access desired data. A big win is definitely passing the names of pokemons from getAllPokemons() to the PokedexCard.js component to generate individual endpoints to fetch the data for all the individual pokemons.
+
+### Design
+
+The app features a design that resembles the Pokemon Center in the Pokemon franchises, and I put thoughts in making the app cohesive and showing relevant data only to make the user experience enjoyable.
 
 ## Key Learnings/ Takeaways
 
-Alice:
-
-- Fully understand how useState works
+- Mastering React hooks like useState
 - How to fetch data that is multiple layers deep and nested in different objects and arrays
-- Bulma styling
+- Using external packages like Bulma on styling
 
 ## Bugs
 
 - The results list of the search bar doesn't clear after the input field is cleared
 
 ## Future Improvements
-
-Alice:
 
 - Filter function for the Pokedex page
 - Sort function for the Pokedex page
